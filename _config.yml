@@ -112,4 +112,4 @@ backup:
   type: git
   theme: next
   repo:
-    github: git@github.com:hailanggao/hailanggao.github.io.git,backup
+    github: git@github.com:hailanggao/hailanggao.github.io.git, backup
