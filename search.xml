@@ -109,20 +109,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2021/02/17/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Hexo tutorial</title>
     <url>/2021/02/17/Hexo-tutorial/</url>
     <content><![CDATA[<h2 id="Prerequesite"><a href="#Prerequesite" class="headerlink" title="Prerequesite:"></a>Prerequesite:</h2><ul>
@@ -132,6 +118,8 @@
 <li> You can check the their vision by the command <code>node -v</code> and <code>npm -v</code>.</li>
 </ul>
 <p><img src="images/16135470990344.png"></p>
+<a id="more"></a>
+
 <h2 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h2><ul>
 <li><p><code>npm install -g hexo-cli</code> to simply install <code>hexo</code></p>
 </li>
@@ -141,7 +129,7 @@
 </li>
 <li><p><code>hexo init</code> to initialise <code>blog</code>. Make sure add <code>sudo</code> at the front if you are not in <code>root</code> account. There are few basic frame content things would be saved in your <code>blog</code> directory after initialisation.<br><img src="images/16135481136676.png"></p>
 </li>
-<li><p><code>hexo s</code> to start our blog, then <code>Hexo</code> will be running at <code>http://localhost:4000</code>. Visit this host on your browse, you will see your <code>Hexo</code> blog is on and there is a quick start blog <code>hello-word</code> on it.<br><img src="Hexo-tutorial/16135460515515/Screen%20Shot%202021-02-17%20at%2015.55.08.png" alt="Screen Shot 2021-02-17 at 15.55.08"></p>
+<li><p><code>hexo s</code> to start our blog, then <code>Hexo</code> will be running at <code>http://localhost:4000</code>. Visit this host on your browse, you will see your <code>Hexo</code> blog is on and there is a quick start blog <code>hello-word</code> on it.<br><img src="images/Screen%20Shot%202021-02-17%20at%2015.55.08.png" alt="Screen Shot 2021-02-17 at 15.55.08"></p>
 </li>
 <li><p><code>Ctrl+c</code> to stop <code>hexo</code> and enter <code>cd source/_posts</code>, you will see this first blog <code>hello-world.md</code> is in there.</p>
 </li>
@@ -184,7 +172,20 @@
 <li><p>Back to <code>blog</code> directory, edit <code>_config/yml</code>. and change <code>theme: landscape</code> to <code>theme: next</code>. Save and exit, then <code>hexo clean</code>(clean), <code>hexo g</code>(generate), <code>hexo s</code>(start). If everything is ok, <code>hexo d</code>(deploy) to deploy.<br><img src="images/16135526686387.png"></p>
 </li>
 </ul>
-<p>-</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/02/17/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
   </entry>
 </search>
