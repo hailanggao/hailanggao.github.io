@@ -290,7 +290,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-02-17 22:08:28 / Modified: 23:04:15" itemprop="dateCreated datePublished" datetime="2021-02-17T22:08:28+08:00">2021-02-17</time>
+              <time title="Created: 2021-02-17 22:08:28 / Modified: 23:09:28" itemprop="dateCreated datePublished" datetime="2021-02-17T22:08:28+08:00">2021-02-17</time>
             </span>
 
           
@@ -325,14 +325,59 @@
 <li> You can check the their vision by the command <code>node -v</code> and <code>npm -v</code>.</li>
 </ul>
 <p><img src="images/16135470990344.png"></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/02/17/Hexo-tutorial/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+<h2 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h2><ul>
+<li><p><code>npm install -g hexo-cli</code> to simply install <code>hexo</code></p>
+</li>
+<li><p><code>hexo -v</code> to check the vision of <code>hexo</code> as well.<br><img src="images/16135473767369.png"></p>
+</li>
+<li><p>Enter your account directory by <code>cd /User/yourAccountName</code>, then create and a directory by <code>mkdir blog</code>. This directory will save every blog things. Then enter this <code>blog</code> directory.<br><img src="images/16135478201958.png"></p>
+</li>
+<li><p><code>hexo init</code> to initialise <code>blog</code>. Make sure add <code>sudo</code> at the front if you are not in <code>root</code> account. There are few basic frame content things would be saved in your <code>blog</code> directory after initialisation.<br><img src="images/16135481136676.png"></p>
+</li>
+<li><p><code>hexo s</code> to start our blog, then <code>Hexo</code> will be running at <code>http://localhost:4000</code>. Visit this host on your browse, you will see your <code>Hexo</code> blog is on and there is a quick start blog <code>hello-word</code> on it.<br><img src="images/Screen%20Shot%202021-02-17%20at%2015.55.08.png" alt="Screen Shot 2021-02-17 at 15.55.08"></p>
+</li>
+<li><p><code>Ctrl+c</code> to stop <code>hexo</code> and enter <code>cd source/_posts</code>, you will see this first blog <code>hello-world.md</code> is in there.</p>
+</li>
+</ul>
+<h2 id="Blog-Creation"><a href="#Blog-Creation" class="headerlink" title="Blog Creation"></a>Blog Creation</h2><ul>
+<li><code>hexo n &quot;YourBlogName&quot;</code> to crate your blogs and use <code>vim</code> or other editors you like to edit your blog. After editing your blog, then back to <code>blog</code> diractory.</li>
+<li><code>hexo clean</code> to remove generated files and cache.</li>
+<li><code>hexo g</code> to generate files.</li>
+<li><code>hexo s</code> again, you will find your blogs appear on your hexo blog.<br><img src="images/16135494686637.png"></li>
+</ul>
+<h2 id="Deploy-blog-to-Github"><a href="#Deploy-blog-to-Github" class="headerlink" title="Deploy blog to Github"></a>Deploy blog to Github</h2><ul>
+<li><p>Create a new repository on Github, and <code>Repository Name</code> <strong>must</strong> be <code>yourGithubAccountName.github.io</code>. For my example, <code>hailanggao.github.io</code>.<br><img src="images/16135512909405.png" alt="-w767"></p>
+</li>
+<li><p><code>npm install --save hexo-deployer-git</code> to instal <code>deployer</code> plug-in under <code>blog</code> directory.<br><img src="images/16135501316753.png"></p>
+</li>
+<li><p>Now we need to edit <code>_config.yml</code> scroll to the end. In <code>Deployment</code> section, Edit and save: </p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: # your Github repository address (for me: https:&#x2F;&#x2F;github.com&#x2F;hailanggao&#x2F;hailanggao.github.io.git)</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<p><img src="images/16135514852166.png"></p>
+<ul>
+<li><code>hexo d</code>, then input your Github account and password to deploy. Mac might ask <code>Keychain Not Found</code>, just click <code>Reset To Defaults</code> and input your mac password. Then you will find your Github repository appear your generated blog.<br><img src="images/16135517037714.png"><br><img src="images/16135518755765.png"></li>
+<li>You can directly visit your blog by enter your repository name on your browser after deploying.<br><img src="images/16135520183624.png" alt="-w915"></li>
+</ul>
+<h2 id="BackUp-Important"><a href="#BackUp-Important" class="headerlink" title="BackUp (Important !!!)"></a>BackUp (Important !!!)</h2><ul>
+<li>Use <a target="_blank" rel="noopener" href="https://github.com/coneycode/hexo-git-backup">hexo-git-backup</a> to back up our <code>hexo</code> configuration.</li>
+<li><code>npm install hexo-git-backup --save</code> to install <code>hexo-backup</code> plug-in.</li>
+<li>Create an branch repository named <code>backup</code> on your Github.</li>
+<li>Edit <code>_config_yml</code>, add </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Backup</span><br><span class="line">backup:</span><br><span class="line">  type: git</span><br><span class="line">  theme: next, ***  # *** other themes you want to back up, separate by comma</span><br><span class="line">  repo:</span><br><span class="line">    github: ***,backup # replace *** to your backup branch SSH address</span><br></pre></td></tr></table></figure>
+<p><img src="images/16135569491549.png"></p>
+<ul>
+<li><p><code>hexo b</code> to back up your configurations on your <code>backup</code> branch.</p>
+<h2 id="Theme-and-configuration-Option"><a href="#Theme-and-configuration-Option" class="headerlink" title="Theme and configuration (Option)"></a>Theme and configuration (Option)</h2></li>
+<li><p>For me: I use <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">NexT</a> theme.</p>
+</li>
+<li><p><code>git clone https://github.com/theme-next/hexo-theme-next themes/next</code> in your <code>blog</code> directory. It will save under <code>/blog/themes</code>.<br><img src="images/16135524473082.png"></p>
+</li>
+<li><p>Back to <code>blog</code> directory, edit <code>_config/yml</code>. and change <code>theme: landscape</code> to <code>theme: next</code>. Save and exit, then <code>hexo clean</code>(clean), <code>hexo g</code>(generate), <code>hexo s</code>(start). If everything is ok, <code>hexo d</code>(deploy) to deploy.<br><img src="images/16135526686387.png"></p>
+</li>
+</ul>
+
       
     </div>
 
