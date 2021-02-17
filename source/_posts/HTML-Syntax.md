@@ -1,7 +1,7 @@
 ---
 title: HTML Syntax
 date: 2021-02-18
-tags: HTML
+tags: "HTML"
 ---
 
 
@@ -9,7 +9,7 @@ tags: HTML
 `<html>`
 `<body>`
 
-
+<!--more-->
 | Tag | Explaination |
 |-----|--------------|
 | `<p></p>`    |        Paragrpha      |

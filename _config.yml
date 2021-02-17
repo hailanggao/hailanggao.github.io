@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
+title: DEBUG THE WORLD
+subtitle: 'MY GROWTH'
 description: ''
 keywords:
-author: John Doe
+author: HAILANG GAO
 language: en
 timezone: ''
 
@@ -113,3 +113,10 @@ backup:
   theme: next
   repo:
     github: git@github.com:hailanggao/hailanggao.github.io.git,backup
+
+#Search
+search:
+path: search.xml
+field: post
+format: html
+limit: 10000
