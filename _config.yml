@@ -111,4 +111,5 @@ deploy:
 backup:
   type: git
   theme: next
-  repository: git@github.com:hailanggao/hailanggao.github.io.git,backup
+  repo:
+    github: git@github.com:hailanggao/hailanggao.github.io.git,backup
