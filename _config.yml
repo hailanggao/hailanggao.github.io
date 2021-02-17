@@ -105,11 +105,11 @@ theme: next
 deploy:
   type: git
   repo: https://github.com/hailanggao/hailanggao.github.io.git
-#  branch: master
+  branch: master
 
 # Backup
 backup:
   type: git
   theme: next
   repo:
-    github: git@github.com:hailanggao/hailanggao.github.io.git, backup
+    github: git@github.com:hailanggao/hailanggao.github.io.git,backup
