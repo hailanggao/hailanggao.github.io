@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/02/17/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>HTML Syntax</title>
+    <url>/2021/02/18/HTML-Syntax/</url>
+    <content><![CDATA[<p><code>&lt;!DOCTYPE html&gt;</code><br><code>&lt;html&gt;</code><br><code>&lt;body&gt;</code></p>
+<a id="more"></a>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Explaination</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>&lt;p&gt;&lt;/p&gt;</code></td>
+<td>Paragrpha</td>
+</tr>
+<tr>
+<td><code>&lt;pre&gt;&lt;/pre&gt;</code></td>
+<td>Preformatted text</td>
+</tr>
+<tr>
+<td><code>&lt;br&gt;</code></td>
+<td>Break to next line</td>
+</tr>
+<tr>
+<td><code>&lt;hr&gt;</code></td>
+<td>Horizontal row</td>
+</tr>
+<tr>
+<td><code>&lt;mark&gt;&lt;/mark&gt;</code></td>
+<td>Marked (highlight)</td>
+</tr>
+<tr>
+<td><code>&lt;small&gt;&lt;/small&gt;</code></td>
+<td>Smaller font</td>
+</tr>
+<tr>
+<td><code>&lt;del&gt;&lt;/del&gt;</code></td>
+<td>Deleted</td>
+</tr>
+<tr>
+<td><code>&lt;sub&gt;&lt;/sub&gt;</code></td>
+<td>Subscripted</td>
+</tr>
+<tr>
+<td><code>&lt;sup&gt;&lt;/sup&gt;</code></td>
+<td>Superscripted</td>
+</tr>
+<tr>
+<td><code>&lt;b&gt;&lt;/b&gt;</code></td>
+<td>Bold (print thick and dark type)</td>
+</tr>
+<tr>
+<td><code>&lt;strong&gt;&lt;/strong&gt;</code></td>
+<td>Same as <code>b</code> but emphasize</td>
+</tr>
+<tr>
+<td><code>&lt;i&gt;&lt;/i&gt;</code></td>
+<td>Italic</td>
+</tr>
+<tr>
+<td><code>&lt;em&gt;&lt;/em&gt;</code></td>
+<td>Same as <code>i</code> but emphasize</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>&lt;a href= &quot;URL/image&quot; target=&quot;_blank&quot; title=&quot;Tips&quot;&gt; text &lt;/a&gt;</code></td>
+<td>Hyperlink</td>
+</tr>
+<tr>
+<td><code>&lt;a&gt;&lt;/a&gt;</code></td>
+<td>Mark text in the <code>&lt;a&gt;</code> tag</td>
+</tr>
+<tr>
+<td><code>href=&quot; &quot;</code></td>
+<td>the source of URL or image</td>
+</tr>
+<tr>
+<td><code>target=&quot;_blank&quot;</code></td>
+<td>open Link in a new tab</td>
+</tr>
+<tr>
+<td><code>target=&quot;_self&quot;</code></td>
+<td>open Link in a current tab</td>
+</tr>
+<tr>
+<td><code>title=&quot; &quot;</code></td>
+<td>Tips when mouse pints the hyperlink</td>
+</tr>
+<tr>
+<td><code>href=&quot;./3.jpg OR ../2.jpg OR /root.jpg OR /dir/One/1.jpg&quot;</code></td>
+<td><code>3.jpg</code> in current directory (<code>index.html</code>) / <code>2.jpg</code> in parent directory / <code>root.jpg</code> in root directory / completed path of <code>1.jpg</code> (<strong>See below attachment 1</strong>)</td>
+</tr>
+<tr>
+<td><code>&lt;img src = &quot; &quot; width=&quot; 500px&quot; hight=&quot;250px&quot; alt=&quot;404&quot;&gt;</code></td>
+<td>Referencing images and set width and hight, <code>alt</code>  error message when image is not available</td>
+</tr>
+</tbody></table>
+<p><code>&lt;/body&gt;</code><br><code>&lt;/html&gt;</code></p>
+<p><strong>Attachment 1</strong>:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#Example of files tree</span><br><span class="line">root</span><br><span class="line">├─root.jpg</span><br><span class="line">├─Dir</span><br><span class="line">|  ├─One</span><br><span class="line">|  |  ├─1.jpg</span><br><span class="line">|  |  ├─Two</span><br><span class="line">|  |  |  ├─2.jpg</span><br><span class="line">|  |  |  ├─Three</span><br><span class="line">|  |  |  |   ├─3.jpg</span><br><span class="line">|  |  |  |   └index.html</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+</search>

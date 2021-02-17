@@ -17,15 +17,15 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="DEBUG THE WORLD">
 <meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="DEBUG THE WORLD">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="HAILANG GAO">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://example.com/">
@@ -41,7 +41,7 @@
   };
 </script>
 
-  <title>Hexo</title>
+  <title>DEBUG THE WORLD</title>
   
 
 
@@ -92,13 +92,15 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Hexo</h1>
+      <h1 class="site-title">DEBUG THE WORLD</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
+      <p class="site-subtitle" itemprop="description">MY GROWTH</p>
   </div>
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -113,16 +115,58 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -149,12 +193,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="HAILANG GAO">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="DEBUG THE WORLD">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -176,10 +220,24 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-02-17 17:08:27" itemprop="dateModified" datetime="2021-02-17T17:08:27+08:00">2021-02-17</time>
+                <time title="Modified: 2021-02-17 19:54:00" itemprop="dateModified" datetime="2021-02-17T19:54:00+08:00">2021-02-17</time>
               </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2021/02/18/HTML-Syntax/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/02/18/HTML-Syntax/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -191,105 +249,14 @@
 
       
           <p><code>&lt;!DOCTYPE html&gt;</code><br><code>&lt;html&gt;</code><br><code>&lt;body&gt;</code></p>
-<table>
-<thead>
-<tr>
-<th>Tag</th>
-<th>Explaination</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>&lt;p&gt;&lt;/p&gt;</code></td>
-<td>Paragrpha</td>
-</tr>
-<tr>
-<td><code>&lt;pre&gt;&lt;/pre&gt;</code></td>
-<td>Preformatted text</td>
-</tr>
-<tr>
-<td><code>&lt;br&gt;</code></td>
-<td>Break to next line</td>
-</tr>
-<tr>
-<td><code>&lt;hr&gt;</code></td>
-<td>Horizontal row</td>
-</tr>
-<tr>
-<td><code>&lt;mark&gt;&lt;/mark&gt;</code></td>
-<td>Marked (highlight)</td>
-</tr>
-<tr>
-<td><code>&lt;small&gt;&lt;/small&gt;</code></td>
-<td>Smaller font</td>
-</tr>
-<tr>
-<td><code>&lt;del&gt;&lt;/del&gt;</code></td>
-<td>Deleted</td>
-</tr>
-<tr>
-<td><code>&lt;sub&gt;&lt;/sub&gt;</code></td>
-<td>Subscripted</td>
-</tr>
-<tr>
-<td><code>&lt;sup&gt;&lt;/sup&gt;</code></td>
-<td>Superscripted</td>
-</tr>
-<tr>
-<td><code>&lt;b&gt;&lt;/b&gt;</code></td>
-<td>Bold (print thick and dark type)</td>
-</tr>
-<tr>
-<td><code>&lt;strong&gt;&lt;/strong&gt;</code></td>
-<td>Same as <code>b</code> but emphasize</td>
-</tr>
-<tr>
-<td><code>&lt;i&gt;&lt;/i&gt;</code></td>
-<td>Italic</td>
-</tr>
-<tr>
-<td><code>&lt;em&gt;&lt;/em&gt;</code></td>
-<td>Same as <code>i</code> but emphasize</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><code>&lt;a href= &quot;URL/image&quot; target=&quot;_blank&quot; title=&quot;Tips&quot;&gt; text &lt;/a&gt;</code></td>
-<td>Hyperlink</td>
-</tr>
-<tr>
-<td><code>&lt;a&gt;&lt;/a&gt;</code></td>
-<td>Mark text in the <code>&lt;a&gt;</code> tag</td>
-</tr>
-<tr>
-<td><code>href=&quot; &quot;</code></td>
-<td>the source of URL or image</td>
-</tr>
-<tr>
-<td><code>target=&quot;_blank&quot;</code></td>
-<td>open Link in a new tab</td>
-</tr>
-<tr>
-<td><code>target=&quot;_self&quot;</code></td>
-<td>open Link in a current tab</td>
-</tr>
-<tr>
-<td><code>title=&quot; &quot;</code></td>
-<td>Tips when mouse pints the hyperlink</td>
-</tr>
-<tr>
-<td><code>href=&quot;./3.jpg OR ../2.jpg OR /root.jpg OR /dir/One/1.jpg&quot;</code></td>
-<td><code>3.jpg</code> in current directory (<code>index.html</code>) / <code>2.jpg</code> in parent directory / <code>root.jpg</code> in root directory / completed path of <code>1.jpg</code> (<strong>See below attachment 1</strong>)</td>
-</tr>
-<tr>
-<td><code>&lt;img src = &quot; &quot; width=&quot; 500px&quot; hight=&quot;250px&quot; alt=&quot;404&quot;&gt;</code></td>
-<td>Referencing images and set width and hight, <code>alt</code>  error message when image is not available</td>
-</tr>
-</tbody></table>
-<p><code>&lt;/body&gt;</code><br><code>&lt;/html&gt;</code></p>
-<p><strong>Attachment 1</strong>:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#Example of files tree</span><br><span class="line">root</span><br><span class="line">├─root.jpg</span><br><span class="line">├─Dir</span><br><span class="line">|  ├─One</span><br><span class="line">|  |  ├─1.jpg</span><br><span class="line">|  |  ├─Two</span><br><span class="line">|  |  |  ├─2.jpg</span><br><span class="line">|  |  |  ├─Three</span><br><span class="line">|  |  |  |   ├─3.jpg</span><br><span class="line">|  |  |  |   └index.html</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/18/HTML-Syntax/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -312,12 +279,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="HAILANG GAO">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="DEBUG THE WORLD">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -336,6 +303,20 @@
             </span>
 
           
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2021/02/17/hello-world/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/02/17/hello-world/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
 
         </div>
       </header>
@@ -428,7 +409,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
+  <p class="site-author-name" itemprop="name">HAILANG GAO</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -441,8 +422,10 @@
         </a>
       </div>
       <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
         <span class="site-state-item-count">1</span>
-        <span class="site-state-item-name">tags</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -472,10 +455,11 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">HAILANG GAO</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
-  </div>
+
+<!--
+-->
 
         
 
@@ -500,12 +484,13 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/muse.js"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
 <script src="/js/next-boot.js"></script>
 
 
+  <script defer src="/lib/three/three.min.js"></script>
 
 
   
@@ -513,6 +498,10 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
+
+
 
 
 
@@ -527,6 +516,35 @@
   
 
   
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'nKafXGa7u7Gr3Kf4WTPIgfNP-MdYXbMMI',
+      appKey     : 'nFpTf1ggmHwrjAvI3FEYEklG',
+      placeholder: "Comment...",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'en' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>
