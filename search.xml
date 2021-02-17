@@ -132,6 +132,7 @@
 <li> You can check the their vision by the command <code>node -v</code> and <code>npm -v</code>.</li>
 </ul>
 <p><img src="images/16135470990344.png"></p>
+<a id="more"></a>
 <h2 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h2><ul>
 <li><p><code>npm install -g hexo-cli</code> to simply install <code>hexo</code></p>
 </li>
