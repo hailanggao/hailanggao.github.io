@@ -12,6 +12,7 @@ date: 2021-02-17 22:08:28
 
 ![](images/16135470990344.png)
 
+
 ## Install Hexo
 * `npm install -g hexo-cli` to simply install `hexo`
 * `hexo -v` to check the vision of `hexo` as well.
@@ -23,7 +24,7 @@ date: 2021-02-17 22:08:28
 ![](images/16135481136676.png)
 
 * `hexo s` to start our blog, then `Hexo` will be running at `http://localhost:4000`. Visit this host on your browse, you will see your `Hexo` blog is on and there is a quick start blog `hello-word` on it.
-![Screen Shot 2021-02-17 at 15.55.08](Hexo-tutorial/16135460515515/Screen%20Shot%202021-02-17%20at%2015.55.08.png)
+![Screen Shot 2021-02-17 at 15.55.08](images/Screen%20Shot%202021-02-17%20at%2015.55.08.png)
 
 * `Ctrl+c` to stop `hexo` and enter `cd source/_posts`, you will see this first blog `hello-world.md` is in there.
 
@@ -85,4 +86,3 @@ backup:
 
 * Back to `blog` directory, edit `_config/yml`. and change `theme: landscape` to `theme: next`. Save and exit, then `hexo clean`(clean), `hexo g`(generate), `hexo s`(start). If everything is ok, `hexo d`(deploy) to deploy.
 ![](images/16135526686387.png)
--

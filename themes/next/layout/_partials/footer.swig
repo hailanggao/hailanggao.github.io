@@ -10,6 +10,7 @@
   </div>
 {%- endif %}
 
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="copyright">
   {% set copyright_year = date(null, 'YYYY') %}
   &copy; {% if theme.footer.since and theme.footer.since != copyright_year %}{{ theme.footer.since }} – {% endif %}
@@ -42,6 +43,12 @@
   {%- endif %}
 </div>
 
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  Total viewer: <span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
 <!--
 {%- if theme.footer.powered %}
   <div class="powered-by">
@@ -61,3 +68,8 @@
 {%- endif %}
 
 {{- next_inject('footer') }}
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">  <b>|</b> &nbspSite word total: {{ totalcount(site) }}</span>
+</div>
