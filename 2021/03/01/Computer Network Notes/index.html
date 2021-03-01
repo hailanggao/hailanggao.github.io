@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Definition-Computer networkA computer network is a set of nodes connected by communication links. Nodes: A node can be a computer, printer or any other device capable of sending&#x2F;receiving data generat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Computer Network Note">
+<meta property="og:url" content="http://example.com/2021/03/01/Computer%20Network%20Notes/index.html">
+<meta property="og:site_name" content="DEBUG THE WORLD">
+<meta property="og:description" content="Definition-Computer networkA computer network is a set of nodes connected by communication links. Nodes: A node can be a computer, printer or any other device capable of sending&#x2F;receiving data generat">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-02-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-03-01T09:56:48.436Z">
+<meta property="article:author" content="HAILANG GAO">
+<meta property="article:tag" content="Notes">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2021/03/01/Computer%20Network%20Notes/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>Computer Network Note | DEBUG THE WORLD</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DEBUG THE WORLD</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">MY GROWTH</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/03/01/Computer%20Network%20Notes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="HAILANG GAO">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DEBUG THE WORLD">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Computer Network Note
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-03-01 00:00:00 / Modified: 17:56:48" itemprop="dateCreated datePublished" datetime="2021-03-01T00:00:00+08:00">2021-03-01</time>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2021/03/01/Computer%20Network%20Notes/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/03/01/Computer%20Network%20Notes/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>7.8k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>11 mins.</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Definition-Computer-network"><a href="#Definition-Computer-network" class="headerlink" title="Definition-Computer network"></a>Definition-Computer network</h2><p>A computer network is a set of <strong>nodes</strong> connected by <strong>communication links</strong>.</p>
+<p><strong>Nodes</strong>: A node can be a computer, printer or any other device capable of sending/receiving data generated by other nodes in the network.</p>
+<p><strong>Communication link</strong> can be a wired link or wireless link. The link carries the information.</p>
+<a id="more"></a>
+
+<h2 id="Basic-characteristics-of-computer-network"><a href="#Basic-characteristics-of-computer-network" class="headerlink" title="Basic characteristics of computer network"></a>Basic characteristics of computer network</h2><ul>
+<li><strong>Fault tolerance</strong>: The ability to <ol>
+<li>Continue working despite failures</li>
+<li>Ensure no loss of service.</li>
+</ol>
+</li>
+<li><strong>Scalability</strong>: The ability to <ol>
+<li>Grow based on the needs</li>
+<li>Have good performance after growth.</li>
+</ol>
+</li>
+<li><strong>Quality of Service(QoS)</strong>: The ability to<ol>
+<li>Set Priorities</li>
+<li>Manage data traffic to reduce data loss, delay etc..</li>
+</ol>
+</li>
+<li><strong>Security</strong>: <ul>
+<li>The ability to prevent:<ul>
+<li>Unauthorised access</li>
+<li>Misuse</li>
+<li>Forgery(伪造)</li>
+</ul>
+</li>
+<li>The ability to provide:<ul>
+<li>Confidentiality</li>
+<li>Integrity</li>
+<li>Availability</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Data-communication"><a href="#Data-communication" class="headerlink" title="Data communication:"></a>Data communication:</h2><p>Data communications are the exchange of data between two nodes via some form of link(transmission medium) such as a cable</p>
+<h2 id="Data-flow"><a href="#Data-flow" class="headerlink" title="Data flow:"></a>Data flow:</h2><ul>
+<li><strong>Simplex</strong>: <ul>
+<li>Communication is always unidirectional. </li>
+<li>One device can transmit and the other device will receive.</li>
+<li>Example: Keyboards, traditional monitors.</li>
+</ul>
+</li>
+<li><strong>Half Duplex</strong>:<ul>
+<li>Communication is in both directions but not at the same time.</li>
+<li>If one device is sending, the other can only receive, and vice versa.</li>
+<li>Example: Walkie-Talkies(对讲机).</li>
+</ul>
+</li>
+<li><strong>Duplex or Full Duplex</strong>:<ul>
+<li>Communication is in both directions simultaneously.</li>
+<li>Device can send and receive at the same time.</li>
+<li>Example: Telephone line.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Protocols"><a href="#Protocols" class="headerlink" title="Protocols"></a>Protocols</h2><ul>
+<li><p>Protocol = Rule.</p>
+</li>
+<li><p>It is a set of rules that govern data communication.</p>
+</li>
+<li><p>Protocol determines:</p>
+<ul>
+<li>What is communicated?</li>
+<li>How it is communicated?</li>
+<li>When it is communicated?</li>
+</ul>
+</li>
+<li><p>Protocols used in network communications also define(<strong>Elements of a protocol</strong>):</p>
+<ol>
+<li><strong>Message encoding</strong></li>
+<li><strong>Message formatting and encapsulation</strong>: <ul>
+<li>Agreed format</li>
+<li>Encapsulated the information to identify the sender and the receiver rightly.</li>
+</ul>
+</li>
+<li><strong>Message timing</strong>: Flow control and Response timeout</li>
+<li><strong>Message size</strong>: Long messages must be broken into smaller pieces to travel across a network.</li>
+<li><strong>Message delivery options</strong>:<ul>
+<li>Unicast(One sender to one receiver)</li>
+<li>Multicast(To many receivers but not all)</li>
+<li>Broadcast(To all receivers)</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="Peer-To-Peer-Network"><a href="#Peer-To-Peer-Network" class="headerlink" title="Peer-To-Peer Network"></a>Peer-To-Peer Network</h2><ul>
+<li>No Centralized administration.</li>
+<li>All peers are equal.</li>
+<li>Simple sharing applications.</li>
+<li>Not scalable.</li>
+</ul>
+<h2 id="Client-Server-Network"><a href="#Client-Server-Network" class="headerlink" title="Client Server Network"></a>Client Server Network</h2><ul>
+<li>Centralised administration.</li>
+<li>Request-Response model.</li>
+<li>Scalable.</li>
+<li>Server may be overloaded.</li>
+</ul>
+<p>##Components of a Computer Network</p>
+<ol>
+<li><strong>Nodes</strong>:<ul>
+<li>End Nodes(End devices): computers, network printer, Mobile handheld devices(smart phones tablets, PDAs, wireless debit/credit card reader, barcode scanner)…</li>
+<li>Intermediary nodes: switches, routers, Wireless access point, hubs, bridges…</li>
+</ul>
+</li>
+<li><strong>Media</strong>:<ul>
+<li>Wired Medium(Guided medium): Ethernet cable, fiver optic cable, USB cable…</li>
+<li>Wireless Medium(Unguided medium):<ul>
+<li>Infrared(short range communication-TV remote control)</li>
+<li>Radio(Bluetooth, Wi-Fi)</li>
+<li>Microwaves(Cellular System)</li>
+<li>Satellite(Long Range communication-GPS)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Services</strong>: e-mail, storage services, file sharing, instant messaging, online game, voice over IP…</li>
+</ol>
+<h2 id="Classification-of-Computer-Network"><a href="#Classification-of-Computer-Network" class="headerlink" title="Classification of Computer Network"></a>Classification of Computer Network</h2><ol>
+<li><strong>Local Area Network(LAN)</strong>: <ul>
+<li>A LAN is a computer network that interconnects computers within a <em>limited area</em> such as a residence, school, laboratory, university campus or office building.</li>
+<li>LAN-devices: Wired LAN(Ethernet-Hub, Switch), Wireless LAN(Wi-Fi)</li>
+</ul>
+</li>
+<li><strong>Metropolitan Area Network(MAN)</strong>:<ul>
+<li>A MAN is a computer network that interconnects users with computer resources in a geographic region of size of a <em>metropolitan are(city)</em>.</li>
+<li>MAN-devices: Switches/Hub, Routers/Bridges</li>
+</ul>
+</li>
+<li><strong>Wide Area Network(WAN)</strong>:<ul>
+<li>A WAN is a <em>telecommunications network</em> that extends over a <em>large geographical area</em> for the primary purpose of computer networking.</li>
+<li>WAN-devices: End devices and intermediary devices</li>
+</ul>
+</li>
+<li>Storage Area Network(SAN):<ul>
+<li><strong>Cloud Computing</strong>:<ul>
+<li>It is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="Network-Topology"><a href="#Network-Topology" class="headerlink" title="Network Topology"></a>Network Topology</h2><p>Arrangement of nodes of a computer network.<br>Topology = Layout.<br>Physical Topology - Placement of various nodes.<br>Logical topology - Deals with the data flow in the network.</p>
+<ul>
+<li><p><strong>Bus</strong>: </p>
+<ul>
+<li><p>All data transmitted between nodes in the network is transmitted over this <em>common transmission medium</em> and is able to be received by all nodes in the network simultaneously.</p>
+</li>
+<li><p>A signal containing the address of the intended receiving machine travels from a source machine in <em>both directions</em> to all machines connected to the bus until it finds the intended recipient.</p>
+<p>Advantages | Disadvantages<br>|—|—|<br>|Only one wire - less expensive|Not fault tolerant(No redundancy)|<br>|Suited for temporary network|Limited cable length|<br>|Node failures does not affect others|No security|</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Ring</strong>:</p>
+<ul>
+<li><p>A ring topology is a bus topology in a closed loop.</p>
+</li>
+<li><p>Peer-to-Peer lAN topology.</p>
+</li>
+<li><p>Two connections: one to each of its nearest neighbours.</p>
+</li>
+<li><p>Unidirectional.</p>
+</li>
+<li><p>Sending and receiving data takes place with the help of a <strong>TOKEN</strong>.</p>
+<p>Advantages | Disadvantages<br>|—|—|<br>|Performance better than Bus topology|Unidirectional. Single point of failure will affect the whole network|<br>|All nodes with equal access|up in load - low in performance|<br>||No security|<br>||Can cause bottleneck due to weak links.|</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Star</strong> :</p>
+<ul>
+<li><p>Every node is connected to a central node called a hub or switch,</p>
+</li>
+<li><p>Centrailised Management.</p>
+</li>
+<li><p>All traffic must pass through the hub or switch.</p>
+<p>Advantages | Disadvantages<br>|—|—|<br>|Easy to design and implement|Single point of failure affects the whole network|<br>|Centralised administration|Bottlenecks due to overloaded switch/hub|<br>|Scalable|Increased cost due to switch/hub|</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Mesh</strong>:</p>
+<ul>
+<li><p>Each node is directly connected to every other nodes in the networks.</p>
+</li>
+<li><p>Fault tolerant and reliable.</p>
+<p>Advantages | Disadvantages<br>|—|—|<br>|Fault tolerant|Issues with broadcasting messages|<br>|Reliable|Expensive and impractical for large networks|</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Hybrid</strong></p>
+</li>
+</ul>
+<hr>
+<h2 id="IP-Address-IPv4"><a href="#IP-Address-IPv4" class="headerlink" title="IP Address(IPv4)"></a>IP Address(IPv4)</h2><ul>
+<li>IP stands for Internet Protocol.</li>
+<li>Every node in the computer network is identified with the help of IP address.</li>
+<li>Logical address.</li>
+<li>Can change based on the location of the device.</li>
+<li>Assigned by manually or dynamically.</li>
+<li>Represented in decimal and it has 4 octets(X.X.X.X).</li>
+<li>0.0.0.0 to 255.255.255.255(32 bits).</li>
+</ul>
+<p>##MAC Address</p>
+<ul>
+<li>MAC stands for Media Access Control.</li>
+<li>Every node in the LAN is identified with the help of MAC address.</li>
+<li>IP address = Location of a person.</li>
+<li>MAC address = Name of the person.</li>
+<li>Physical address or Hardware Address.</li>
+<li>Unique and cannot be changed.</li>
+<li>Assigned by the manufacturer.</li>
+<li>Represented in hexadecimal(70-20-84-00-ED-FC(48 bits)).</li>
+<li>Separator: hyphen(-), period(.), and colon(:).</li>
+</ul>
+<p>##IP Address Vs. MAC Address<br>|IP Address | MAC Address|<br>|—|—|<br>|Needed for communication.|Needed for communication.|<br>|32 bits.|48 bits.|<br>|Represented in Decimal.|Represented in hexadecimal.|<br>|<strong>Router</strong> needs IP address to forward data.|<strong>Switch</strong> needs MAC address to forward data.|<br>|Example: 10.10.23.56|Example: 70-20-84-00-ED-FC| </p>
+<p>##Port Addressing (Port Number)</p>
+<ul>
+<li>In a node, many processes will be running.</li>
+<li>Data which are sent/received must reach the right process.</li>
+<li>Every process in a node is uniquely identified using <strong>port numbers</strong>.</li>
+<li>Port = Communication endpoint.</li>
+<li>Fixed port numbers and dynamic port numbers(0-65535)</li>
+</ul>
+<h2 id="3-Key-points-to-PONDER"><a href="#3-Key-points-to-PONDER" class="headerlink" title="3 Key points to PONDER"></a>3 Key points to PONDER</h2><p>Before sending the data, any node must</p>
+<ul>
+<li>Attach source IP address and destination IP address.</li>
+<li>Attach source MAC address and destination MAC address.</li>
+<li>Attach source port number and destination port number.</li>
+</ul>
+<hr>
+<h2 id="Switching"><a href="#Switching" class="headerlink" title="Switching"></a>Switching</h2><ul>
+<li>Switching in computer network helps in deciding <strong>the best route</strong> for data transmission if there are multiple paths in a large network.</li>
+<li>One-to-One connection.</li>
+</ul>
+<h2 id="Switching-techniques"><a href="#Switching-techniques" class="headerlink" title="Switching techniques"></a>Switching techniques</h2><ul>
+<li><p><strong>Circuit switching</strong>:</p>
+<ul>
+<li><p>A dedicated path is established between the sender and receiver.</p>
+</li>
+<li><p>Before data transfer, connection will be established first.</p>
+</li>
+<li><p>Example: Telephone network.</p>
+<p>3 Phases in circuit switching:</p>
+</li>
+</ul>
+<ol>
+<li>Connection establishment</li>
+<li>Data transfer</li>
+<li>Connection Disconnection</li>
+</ol>
+</li>
+<li><p><strong>Message Swithching</strong>:</p>
+<ul>
+<li>Store and forward mechanism.</li>
+<li>Message is transferred as a complete unit and forwarded using store and forward mechanism at the intermediary node.</li>
+<li>Not suited for streaming media and real-time applications.</li>
+</ul>
+</li>
+<li><p><strong>Packet switching</strong>:</p>
+<ul>
+<li>The internet is a packet switched network.</li>
+<li>Message is broken into individual chunks called as <strong>packets</strong>.</li>
+<li>Each packet is sent individually.</li>
+<li>Each packet will have <strong>source and destination IP address</strong> with sequence number.</li>
+<li>Sequence numbers will help the receiver to<ul>
+<li>Recorder the packets</li>
+<li>Detect missing packets and</li>
+<li>Send acknowledgments.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Two-approaches-to-packet-switching"><a href="#Two-approaches-to-packet-switching" class="headerlink" title="Two approaches to packet switching"></a>Two approaches to packet switching</h2><ol>
+<li><strong>Datagram Approach</strong>:<ul>
+<li>Datagram Packet Switching is also known as <strong>connectionless switching</strong>.</li>
+<li>Each independent entity is called as datagram.</li>
+<li>Datagrams contain destination information and the intermediary devices used this information to forward datagrams to right destination.</li>
+<li>In Datagram Packet Switching approach, the path is not fixed.</li>
+<li>Intermediate nodes take the routing decisions to forward the packets.</li>
+</ul>
+</li>
+<li><strong>Virtual Circuit Approach</strong>:<ul>
+<li>Virtual Circuit Switching is also known as <strong>connection-oriented switching</strong>.</li>
+<li>In the case of Virtual circuit switching, a preplanned route is established before the messages are sent.</li>
+<li>Call request and call accept packets are used to establish the connection between sender and receiver.</li>
+<li>In this approach, the path is fixed for the duration of a logical connection.</li>
+</ul>
+</li>
+</ol>
+<hr>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Notes/" rel="tag"><i class="fa fa-tag"></i> Notes</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/02/18/HTML-Syntax/" rel="prev" title="HTML Syntax">
+      <i class="fa fa-chevron-left"></i> HTML Syntax
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition-Computer-network"><span class="nav-text">Definition-Computer network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-characteristics-of-computer-network"><span class="nav-text">Basic characteristics of computer network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-communication"><span class="nav-text">Data communication:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-flow"><span class="nav-text">Data flow:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Protocols"><span class="nav-text">Protocols</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Peer-To-Peer-Network"><span class="nav-text">Peer-To-Peer Network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Client-Server-Network"><span class="nav-text">Client Server Network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Classification-of-Computer-Network"><span class="nav-text">Classification of Computer Network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Network-Topology"><span class="nav-text">Network Topology</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IP-Address-IPv4"><span class="nav-text">IP Address(IPv4)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Key-points-to-PONDER"><span class="nav-text">3 Key points to PONDER</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Switching"><span class="nav-text">Switching</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Switching-techniques"><span class="nav-text">Switching techniques</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Two-approaches-to-packet-switching"><span class="nav-text">Two approaches to packet switching</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">HAILANG GAO</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HAILANG GAO</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">Symbols count total: </span>
+    <span title="Symbols count total">12k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">Reading time total &asymp;</span>
+    <span title="Reading time total">17 mins.</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  Total viewer: <span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+
+<!--
+-->
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">  <b>|</b> &nbspSite word total: 2.3k</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  <script defer src="/lib/three/three.min.js"></script>
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : true,
+      appId      : 'nKafXGa7u7Gr3Kf4WTPIgfNP-MdYXbMMI',
+      appKey     : 'nFpTf1ggmHwrjAvI3FEYEklG',
+      placeholder: "Comment...",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'en' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>
