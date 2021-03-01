@@ -104,8 +104,7 @@
 <li>Scalable.</li>
 <li>Server may be overloaded.</li>
 </ul>
-<p>##Components of a Computer Network</p>
-<ol>
+<h2 id="Components-of-a-Computer-Network"><a href="#Components-of-a-Computer-Network" class="headerlink" title="Components of a Computer Network"></a>Components of a Computer Network</h2><ol>
 <li><strong>Nodes</strong>:<ul>
 <li>End Nodes(End devices): computers, network printer, Mobile handheld devices(smart phones tablets, PDAs, wireless debit/credit card reader, barcode scanner)…</li>
 <li>Intermediary nodes: switches, routers, Wireless access point, hubs, bridges…</li>
@@ -156,7 +155,26 @@
 <li><p>All data transmitted between nodes in the network is transmitted over this <em>common transmission medium</em> and is able to be received by all nodes in the network simultaneously.</p>
 </li>
 <li><p>A signal containing the address of the intended receiving machine travels from a source machine in <em>both directions</em> to all machines connected to the bus until it finds the intended recipient.</p>
-<p>Advantages | Disadvantages<br>|—|—|<br>|Only one wire - less expensive|Not fault tolerant(No redundancy)|<br>|Suited for temporary network|Limited cable length|<br>|Node failures does not affect others|No security|</p>
+<table>
+<thead>
+<tr>
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Only one wire - less expensive</td>
+<td>Not fault tolerant(No redundancy)</td>
+</tr>
+<tr>
+<td>Suited for temporary network</td>
+<td>Limited cable length</td>
+</tr>
+<tr>
+<td>Node failures does not affect others</td>
+<td>No security</td>
+</tr>
+</tbody></table>
 </li>
 </ul>
 </li>
@@ -171,7 +189,30 @@
 <li><p>Unidirectional.</p>
 </li>
 <li><p>Sending and receiving data takes place with the help of a <strong>TOKEN</strong>.</p>
-<p>Advantages | Disadvantages<br>|—|—|<br>|Performance better than Bus topology|Unidirectional. Single point of failure will affect the whole network|<br>|All nodes with equal access|up in load - low in performance|<br>||No security|<br>||Can cause bottleneck due to weak links.|</p>
+<table>
+<thead>
+<tr>
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Performance better than Bus topology</td>
+<td>Unidirectional. Single point of failure will affect the whole network</td>
+</tr>
+<tr>
+<td>All nodes with equal access</td>
+<td>up in load - low in performance</td>
+</tr>
+<tr>
+<td></td>
+<td>No security</td>
+</tr>
+<tr>
+<td></td>
+<td>Can cause bottleneck due to weak links.</td>
+</tr>
+</tbody></table>
 </li>
 </ul>
 </li>
@@ -182,7 +223,26 @@
 <li><p>Centrailised Management.</p>
 </li>
 <li><p>All traffic must pass through the hub or switch.</p>
-<p>Advantages | Disadvantages<br>|—|—|<br>|Easy to design and implement|Single point of failure affects the whole network|<br>|Centralised administration|Bottlenecks due to overloaded switch/hub|<br>|Scalable|Increased cost due to switch/hub|</p>
+<table>
+<thead>
+<tr>
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Easy to design and implement</td>
+<td>Single point of failure affects the whole network</td>
+</tr>
+<tr>
+<td>Centralised administration</td>
+<td>Bottlenecks due to overloaded switch/hub</td>
+</tr>
+<tr>
+<td>Scalable</td>
+<td>Increased cost due to switch/hub</td>
+</tr>
+</tbody></table>
 </li>
 </ul>
 </li>
@@ -191,7 +251,22 @@
 <li><p>Each node is directly connected to every other nodes in the networks.</p>
 </li>
 <li><p>Fault tolerant and reliable.</p>
-<p>Advantages | Disadvantages<br>|—|—|<br>|Fault tolerant|Issues with broadcasting messages|<br>|Reliable|Expensive and impractical for large networks|</p>
+<table>
+<thead>
+<tr>
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fault tolerant</td>
+<td>Issues with broadcasting messages</td>
+</tr>
+<tr>
+<td>Reliable</td>
+<td>Expensive and impractical for large networks</td>
+</tr>
+</tbody></table>
 </li>
 </ul>
 </li>
@@ -208,8 +283,7 @@
 <li>Represented in decimal and it has 4 octets(X.X.X.X).</li>
 <li>0.0.0.0 to 255.255.255.255(32 bits).</li>
 </ul>
-<p>##MAC Address</p>
-<ul>
+<h2 id="MAC-Address"><a href="#MAC-Address" class="headerlink" title="MAC Address"></a>MAC Address</h2><ul>
 <li>MAC stands for Media Access Control.</li>
 <li>Every node in the LAN is identified with the help of MAC address.</li>
 <li>IP address = Location of a person.</li>
@@ -220,9 +294,35 @@
 <li>Represented in hexadecimal(70-20-84-00-ED-FC(48 bits)).</li>
 <li>Separator: hyphen(-), period(.), and colon(:).</li>
 </ul>
-<p>##IP Address Vs. MAC Address<br>|IP Address | MAC Address|<br>|—|—|<br>|Needed for communication.|Needed for communication.|<br>|32 bits.|48 bits.|<br>|Represented in Decimal.|Represented in hexadecimal.|<br>|<strong>Router</strong> needs IP address to forward data.|<strong>Switch</strong> needs MAC address to forward data.|<br>|Example: 10.10.23.56|Example: 70-20-84-00-ED-FC| </p>
-<p>##Port Addressing (Port Number)</p>
-<ul>
+<h2 id="IP-Address-Vs-MAC-Address"><a href="#IP-Address-Vs-MAC-Address" class="headerlink" title="IP Address Vs. MAC Address"></a>IP Address Vs. MAC Address</h2><table>
+<thead>
+<tr>
+<th>IP Address</th>
+<th>MAC Address</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Needed for communication.</td>
+<td>Needed for communication.</td>
+</tr>
+<tr>
+<td>32 bits.</td>
+<td>48 bits.</td>
+</tr>
+<tr>
+<td>Represented in Decimal.</td>
+<td>Represented in hexadecimal.</td>
+</tr>
+<tr>
+<td><strong>Router</strong> needs IP address to forward data.</td>
+<td><strong>Switch</strong> needs MAC address to forward data.</td>
+</tr>
+<tr>
+<td>Example: 10.10.23.56</td>
+<td>Example: 70-20-84-00-ED-FC</td>
+</tr>
+</tbody></table>
+<h2 id="Port-Addressing-Port-Number"><a href="#Port-Addressing-Port-Number" class="headerlink" title="Port Addressing (Port Number)"></a>Port Addressing (Port Number)</h2><ul>
 <li>In a node, many processes will be running.</li>
 <li>Data which are sent/received must reach the right process.</li>
 <li>Every process in a node is uniquely identified using <strong>port numbers</strong>.</li>

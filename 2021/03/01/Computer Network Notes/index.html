@@ -28,7 +28,7 @@
 <meta property="og:description" content="Definition-Computer networkA computer network is a set of nodes connected by communication links. Nodes: A node can be a computer, printer or any other device capable of sending&#x2F;receiving data generat">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-02-28T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-03-01T09:56:48.436Z">
+<meta property="article:modified_time" content="2021-03-01T10:07:25.228Z">
 <meta property="article:author" content="HAILANG GAO">
 <meta property="article:tag" content="Notes">
 <meta name="twitter:card" content="summary">
@@ -209,7 +209,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-03-01 00:00:00 / Modified: 17:56:48" itemprop="dateCreated datePublished" datetime="2021-03-01T00:00:00+08:00">2021-03-01</time>
+              <time title="Created: 2021-03-01 00:00:00 / Modified: 18:07:25" itemprop="dateCreated datePublished" datetime="2021-03-01T00:00:00+08:00">2021-03-01</time>
             </span>
 
           
@@ -232,7 +232,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>7.8k</span>
+              <span>7.7k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -352,8 +352,7 @@
 <li>Scalable.</li>
 <li>Server may be overloaded.</li>
 </ul>
-<p>##Components of a Computer Network</p>
-<ol>
+<h2 id="Components-of-a-Computer-Network"><a href="#Components-of-a-Computer-Network" class="headerlink" title="Components of a Computer Network"></a>Components of a Computer Network</h2><ol>
 <li><strong>Nodes</strong>:<ul>
 <li>End Nodes(End devices): computers, network printer, Mobile handheld devices(smart phones tablets, PDAs, wireless debit/credit card reader, barcode scanner)…</li>
 <li>Intermediary nodes: switches, routers, Wireless access point, hubs, bridges…</li>
@@ -404,7 +403,26 @@
 <li><p>All data transmitted between nodes in the network is transmitted over this <em>common transmission medium</em> and is able to be received by all nodes in the network simultaneously.</p>
 </li>
 <li><p>A signal containing the address of the intended receiving machine travels from a source machine in <em>both directions</em> to all machines connected to the bus until it finds the intended recipient.</p>
-<p>Advantages | Disadvantages<br>|—|—|<br>|Only one wire - less expensive|Not fault tolerant(No redundancy)|<br>|Suited for temporary network|Limited cable length|<br>|Node failures does not affect others|No security|</p>
+<table>
+<thead>
+<tr>
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Only one wire - less expensive</td>
+<td>Not fault tolerant(No redundancy)</td>
+</tr>
+<tr>
+<td>Suited for temporary network</td>
+<td>Limited cable length</td>
+</tr>
+<tr>
+<td>Node failures does not affect others</td>
+<td>No security</td>
+</tr>
+</tbody></table>
 </li>
 </ul>
 </li>
@@ -419,7 +437,30 @@
 <li><p>Unidirectional.</p>
 </li>
 <li><p>Sending and receiving data takes place with the help of a <strong>TOKEN</strong>.</p>
-<p>Advantages | Disadvantages<br>|—|—|<br>|Performance better than Bus topology|Unidirectional. Single point of failure will affect the whole network|<br>|All nodes with equal access|up in load - low in performance|<br>||No security|<br>||Can cause bottleneck due to weak links.|</p>
+<table>
+<thead>
+<tr>
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Performance better than Bus topology</td>
+<td>Unidirectional. Single point of failure will affect the whole network</td>
+</tr>
+<tr>
+<td>All nodes with equal access</td>
+<td>up in load - low in performance</td>
+</tr>
+<tr>
+<td></td>
+<td>No security</td>
+</tr>
+<tr>
+<td></td>
+<td>Can cause bottleneck due to weak links.</td>
+</tr>
+</tbody></table>
 </li>
 </ul>
 </li>
@@ -430,7 +471,26 @@
 <li><p>Centrailised Management.</p>
 </li>
 <li><p>All traffic must pass through the hub or switch.</p>
-<p>Advantages | Disadvantages<br>|—|—|<br>|Easy to design and implement|Single point of failure affects the whole network|<br>|Centralised administration|Bottlenecks due to overloaded switch/hub|<br>|Scalable|Increased cost due to switch/hub|</p>
+<table>
+<thead>
+<tr>
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Easy to design and implement</td>
+<td>Single point of failure affects the whole network</td>
+</tr>
+<tr>
+<td>Centralised administration</td>
+<td>Bottlenecks due to overloaded switch/hub</td>
+</tr>
+<tr>
+<td>Scalable</td>
+<td>Increased cost due to switch/hub</td>
+</tr>
+</tbody></table>
 </li>
 </ul>
 </li>
@@ -439,7 +499,22 @@
 <li><p>Each node is directly connected to every other nodes in the networks.</p>
 </li>
 <li><p>Fault tolerant and reliable.</p>
-<p>Advantages | Disadvantages<br>|—|—|<br>|Fault tolerant|Issues with broadcasting messages|<br>|Reliable|Expensive and impractical for large networks|</p>
+<table>
+<thead>
+<tr>
+<th>Advantages</th>
+<th>Disadvantages</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Fault tolerant</td>
+<td>Issues with broadcasting messages</td>
+</tr>
+<tr>
+<td>Reliable</td>
+<td>Expensive and impractical for large networks</td>
+</tr>
+</tbody></table>
 </li>
 </ul>
 </li>
@@ -456,8 +531,7 @@
 <li>Represented in decimal and it has 4 octets(X.X.X.X).</li>
 <li>0.0.0.0 to 255.255.255.255(32 bits).</li>
 </ul>
-<p>##MAC Address</p>
-<ul>
+<h2 id="MAC-Address"><a href="#MAC-Address" class="headerlink" title="MAC Address"></a>MAC Address</h2><ul>
 <li>MAC stands for Media Access Control.</li>
 <li>Every node in the LAN is identified with the help of MAC address.</li>
 <li>IP address = Location of a person.</li>
@@ -468,9 +542,35 @@
 <li>Represented in hexadecimal(70-20-84-00-ED-FC(48 bits)).</li>
 <li>Separator: hyphen(-), period(.), and colon(:).</li>
 </ul>
-<p>##IP Address Vs. MAC Address<br>|IP Address | MAC Address|<br>|—|—|<br>|Needed for communication.|Needed for communication.|<br>|32 bits.|48 bits.|<br>|Represented in Decimal.|Represented in hexadecimal.|<br>|<strong>Router</strong> needs IP address to forward data.|<strong>Switch</strong> needs MAC address to forward data.|<br>|Example: 10.10.23.56|Example: 70-20-84-00-ED-FC| </p>
-<p>##Port Addressing (Port Number)</p>
-<ul>
+<h2 id="IP-Address-Vs-MAC-Address"><a href="#IP-Address-Vs-MAC-Address" class="headerlink" title="IP Address Vs. MAC Address"></a>IP Address Vs. MAC Address</h2><table>
+<thead>
+<tr>
+<th>IP Address</th>
+<th>MAC Address</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Needed for communication.</td>
+<td>Needed for communication.</td>
+</tr>
+<tr>
+<td>32 bits.</td>
+<td>48 bits.</td>
+</tr>
+<tr>
+<td>Represented in Decimal.</td>
+<td>Represented in hexadecimal.</td>
+</tr>
+<tr>
+<td><strong>Router</strong> needs IP address to forward data.</td>
+<td><strong>Switch</strong> needs MAC address to forward data.</td>
+</tr>
+<tr>
+<td>Example: 10.10.23.56</td>
+<td>Example: 70-20-84-00-ED-FC</td>
+</tr>
+</tbody></table>
+<h2 id="Port-Addressing-Port-Number"><a href="#Port-Addressing-Port-Number" class="headerlink" title="Port Addressing (Port Number)"></a>Port Addressing (Port Number)</h2><ul>
 <li>In a node, many processes will be running.</li>
 <li>Data which are sent/received must reach the right process.</li>
 <li>Every process in a node is uniquely identified using <strong>port numbers</strong>.</li>
@@ -626,7 +726,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition-Computer-network"><span class="nav-text">Definition-Computer network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-characteristics-of-computer-network"><span class="nav-text">Basic characteristics of computer network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-communication"><span class="nav-text">Data communication:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-flow"><span class="nav-text">Data flow:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Protocols"><span class="nav-text">Protocols</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Peer-To-Peer-Network"><span class="nav-text">Peer-To-Peer Network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Client-Server-Network"><span class="nav-text">Client Server Network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Classification-of-Computer-Network"><span class="nav-text">Classification of Computer Network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Network-Topology"><span class="nav-text">Network Topology</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IP-Address-IPv4"><span class="nav-text">IP Address(IPv4)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Key-points-to-PONDER"><span class="nav-text">3 Key points to PONDER</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Switching"><span class="nav-text">Switching</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Switching-techniques"><span class="nav-text">Switching techniques</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Two-approaches-to-packet-switching"><span class="nav-text">Two approaches to packet switching</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Definition-Computer-network"><span class="nav-text">Definition-Computer network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic-characteristics-of-computer-network"><span class="nav-text">Basic characteristics of computer network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-communication"><span class="nav-text">Data communication:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-flow"><span class="nav-text">Data flow:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Protocols"><span class="nav-text">Protocols</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Peer-To-Peer-Network"><span class="nav-text">Peer-To-Peer Network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Client-Server-Network"><span class="nav-text">Client Server Network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Components-of-a-Computer-Network"><span class="nav-text">Components of a Computer Network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Classification-of-Computer-Network"><span class="nav-text">Classification of Computer Network</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Network-Topology"><span class="nav-text">Network Topology</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IP-Address-IPv4"><span class="nav-text">IP Address(IPv4)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC-Address"><span class="nav-text">MAC Address</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IP-Address-Vs-MAC-Address"><span class="nav-text">IP Address Vs. MAC Address</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Port-Addressing-Port-Number"><span class="nav-text">Port Addressing (Port Number)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Key-points-to-PONDER"><span class="nav-text">3 Key points to PONDER</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Switching"><span class="nav-text">Switching</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Switching-techniques"><span class="nav-text">Switching techniques</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Two-approaches-to-packet-switching"><span class="nav-text">Two approaches to packet switching</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
