@@ -403,70 +403,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo tutorial</title>
-    <url>/2021/02/17/Hexo-tutorial/</url>
-    <content><![CDATA[<h2 id="Prerequesite"><a href="#Prerequesite" class="headerlink" title="Prerequesite:"></a>Prerequesite:</h2><ul>
-<li> This tutorial is based on the MacOS. The steps are similar on other systems.</li>
-<li> <a href="https://nodejs.org/">Node.js</a>: <code>node</code> and <code>npm</code> should be installed after installing the <code>Node.js</code> package. </li>
-<li><code>sudo -i</code> or <code>sudo su</code> switch to <code>root</code> account on your terminal.</li>
-<li> You can check the their vision by the command <code>node -v</code> and <code>npm -v</code>.</li>
-</ul>
-<p><img src="images/16135470990344.png"></p>
-<h2 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h2><ul>
-<li><p><code>npm install -g hexo-cli</code> to simply install <code>hexo</code></p>
-</li>
-<li><p><code>hexo -v</code> to check the vision of <code>hexo</code> as well.<br><img src="images/16135473767369.png"></p>
-</li>
-<li><p>Enter your account directory by <code>cd /User/yourAccountName</code>, then create and a directory by <code>mkdir blog</code>. This directory will save every blog things. Then enter this <code>blog</code> directory.<br><img src="images/16135478201958.png"></p>
-</li>
-<li><p><code>hexo init</code> to initialise <code>blog</code>. Make sure add <code>sudo</code> at the front if you are not in <code>root</code> account. There are few basic frame content things would be saved in your <code>blog</code> directory after initialisation.<br><img src="images/16135481136676.png"></p>
-</li>
-<li><p><code>hexo s</code> to start our blog, then <code>Hexo</code> will be running at <code>http://localhost:4000</code>. Visit this host on your browse, you will see your <code>Hexo</code> blog is on and there is a quick start blog <code>hello-word</code> on it.<br><img src="images/Screen%20Shot%202021-02-17%20at%2015.55.08.png" alt="Screen Shot 2021-02-17 at 15.55.08"></p>
-</li>
-<li><p><code>Ctrl+c</code> to stop <code>hexo</code> and enter <code>cd source/_posts</code>, you will see this first blog <code>hello-world.md</code> is in there.</p>
-</li>
-</ul>
-<h2 id="Blog-Creation"><a href="#Blog-Creation" class="headerlink" title="Blog Creation"></a>Blog Creation</h2><ul>
-<li><code>hexo n &quot;YourBlogName&quot;</code> to crate your blogs and use <code>vim</code> or other editors you like to edit your blog. After editing your blog, then back to <code>blog</code> diractory.</li>
-<li><code>hexo clean</code> to remove generated files and cache.</li>
-<li><code>hexo g</code> to generate files.</li>
-<li><code>hexo s</code> again, you will find your blogs appear on your hexo blog.<br><img src="images/16135494686637.png"></li>
-</ul>
-<h2 id="Deploy-blog-to-Github"><a href="#Deploy-blog-to-Github" class="headerlink" title="Deploy blog to Github"></a>Deploy blog to Github</h2><ul>
-<li><p>Create a new repository on Github, and <code>Repository Name</code> <strong>must</strong> be <code>yourGithubAccountName.github.io</code>. For my example, <code>hailanggao.github.io</code>.<br><img src="images/16135512909405.png" alt="-w767"></p>
-</li>
-<li><p><code>npm install --save hexo-deployer-git</code> to instal <code>deployer</code> plug-in under <code>blog</code> directory.<br><img src="images/16135501316753.png"></p>
-</li>
-<li><p>Now we need to edit <code>_config.yml</code> scroll to the end. In <code>Deployment</code> section, Edit and save: </p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: # your Github repository address (for me: https:&#x2F;&#x2F;github.com&#x2F;hailanggao&#x2F;hailanggao.github.io.git)</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
-<p><img src="images/16135514852166.png"></p>
-<ul>
-<li><code>hexo d</code>, then input your Github account and password to deploy. Mac might ask <code>Keychain Not Found</code>, just click <code>Reset To Defaults</code> and input your mac password. Then you will find your Github repository appear your generated blog.<br><img src="images/16135517037714.png"><br><img src="images/16135518755765.png"></li>
-<li>You can directly visit your blog by enter your repository name on your browser after deploying.<br><img src="images/16135520183624.png" alt="-w915"></li>
-</ul>
-<h2 id="BackUp-Important"><a href="#BackUp-Important" class="headerlink" title="BackUp (Important !!!)"></a>BackUp (Important !!!)</h2><ul>
-<li>Use <a href="https://github.com/coneycode/hexo-git-backup">hexo-git-backup</a> to back up our <code>hexo</code> configuration.</li>
-<li><code>npm install hexo-git-backup --save</code> to install <code>hexo-backup</code> plug-in.</li>
-<li>Create an branch repository named <code>backup</code> on your Github.</li>
-<li>Edit <code>_config_yml</code>, add </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Backup</span><br><span class="line">backup:</span><br><span class="line">  type: git</span><br><span class="line">  theme: next, ***  # *** other themes you want to back up, separate by comma</span><br><span class="line">  repo:</span><br><span class="line">    github: ***,backup # replace *** to your backup branch SSH address</span><br></pre></td></tr></table></figure>
-<p><img src="images/16135569491549.png"></p>
-<ul>
-<li><p><code>hexo b</code> to back up your configurations on your <code>backup</code> branch.</p>
-<h2 id="Theme-and-configuration-Option"><a href="#Theme-and-configuration-Option" class="headerlink" title="Theme and configuration (Option)"></a>Theme and configuration (Option)</h2></li>
-<li><p>For me: I use <a href="https://github.com/theme-next/hexo-theme-next">NexT</a> theme.</p>
-</li>
-<li><p><code>git clone https://github.com/theme-next/hexo-theme-next themes/next</code> in your <code>blog</code> directory. It will save under <code>/blog/themes</code>.<br><img src="images/16135524473082.png"></p>
-</li>
-<li><p>Back to <code>blog</code> directory, edit <code>_config/yml</code>. and change <code>theme: landscape</code> to <code>theme: next</code>. Save and exit, then <code>hexo clean</code>(clean), <code>hexo g</code>(generate), <code>hexo s</code>(start). If everything is ok, <code>hexo d</code>(deploy) to deploy.<br><img src="images/16135526686387.png"></p>
-</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
     <title>HTML Syntax</title>
     <url>/2021/02/18/HTML-Syntax/</url>
     <content><![CDATA[<p><code>&lt;!DOCTYPE html&gt;</code><br><code>&lt;html&gt;</code><br><code>&lt;body&gt;</code></p>
@@ -575,6 +511,70 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo tutorial</title>
+    <url>/2021/02/17/Hexo-tutorial/</url>
+    <content><![CDATA[<h2 id="Prerequesite"><a href="#Prerequesite" class="headerlink" title="Prerequesite:"></a>Prerequesite:</h2><ul>
+<li> This tutorial is based on the MacOS. The steps are similar on other systems.</li>
+<li> <a href="https://nodejs.org/">Node.js</a>: <code>node</code> and <code>npm</code> should be installed after installing the <code>Node.js</code> package. </li>
+<li><code>sudo -i</code> or <code>sudo su</code> switch to <code>root</code> account on your terminal.</li>
+<li> You can check the their vision by the command <code>node -v</code> and <code>npm -v</code>.</li>
+</ul>
+<p><img src="images/16135470990344.png"></p>
+<h2 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h2><ul>
+<li><p><code>npm install -g hexo-cli</code> to simply install <code>hexo</code></p>
+</li>
+<li><p><code>hexo -v</code> to check the vision of <code>hexo</code> as well.<br><img src="images/16135473767369.png"></p>
+</li>
+<li><p>Enter your account directory by <code>cd /User/yourAccountName</code>, then create and a directory by <code>mkdir blog</code>. This directory will save every blog things. Then enter this <code>blog</code> directory.<br><img src="images/16135478201958.png"></p>
+</li>
+<li><p><code>hexo init</code> to initialise <code>blog</code>. Make sure add <code>sudo</code> at the front if you are not in <code>root</code> account. There are few basic frame content things would be saved in your <code>blog</code> directory after initialisation.<br><img src="images/16135481136676.png"></p>
+</li>
+<li><p><code>hexo s</code> to start our blog, then <code>Hexo</code> will be running at <code>http://localhost:4000</code>. Visit this host on your browse, you will see your <code>Hexo</code> blog is on and there is a quick start blog <code>hello-word</code> on it.<br><img src="images/Screen%20Shot%202021-02-17%20at%2015.55.08.png" alt="Screen Shot 2021-02-17 at 15.55.08"></p>
+</li>
+<li><p><code>Ctrl+c</code> to stop <code>hexo</code> and enter <code>cd source/_posts</code>, you will see this first blog <code>hello-world.md</code> is in there.</p>
+</li>
+</ul>
+<h2 id="Blog-Creation"><a href="#Blog-Creation" class="headerlink" title="Blog Creation"></a>Blog Creation</h2><ul>
+<li><code>hexo n &quot;YourBlogName&quot;</code> to crate your blogs and use <code>vim</code> or other editors you like to edit your blog. After editing your blog, then back to <code>blog</code> diractory.</li>
+<li><code>hexo clean</code> to remove generated files and cache.</li>
+<li><code>hexo g</code> to generate files.</li>
+<li><code>hexo s</code> again, you will find your blogs appear on your hexo blog.<br><img src="images/16135494686637.png"></li>
+</ul>
+<h2 id="Deploy-blog-to-Github"><a href="#Deploy-blog-to-Github" class="headerlink" title="Deploy blog to Github"></a>Deploy blog to Github</h2><ul>
+<li><p>Create a new repository on Github, and <code>Repository Name</code> <strong>must</strong> be <code>yourGithubAccountName.github.io</code>. For my example, <code>hailanggao.github.io</code>.<br><img src="images/16135512909405.png" alt="-w767"></p>
+</li>
+<li><p><code>npm install --save hexo-deployer-git</code> to instal <code>deployer</code> plug-in under <code>blog</code> directory.<br><img src="images/16135501316753.png"></p>
+</li>
+<li><p>Now we need to edit <code>_config.yml</code> scroll to the end. In <code>Deployment</code> section, Edit and save: </p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    type: git</span><br><span class="line">    repo: # your Github repository address (for me: https:&#x2F;&#x2F;github.com&#x2F;hailanggao&#x2F;hailanggao.github.io.git)</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
+<p><img src="images/16135514852166.png"></p>
+<ul>
+<li><code>hexo d</code>, then input your Github account and password to deploy. Mac might ask <code>Keychain Not Found</code>, just click <code>Reset To Defaults</code> and input your mac password. Then you will find your Github repository appear your generated blog.<br><img src="images/16135517037714.png"><br><img src="images/16135518755765.png"></li>
+<li>You can directly visit your blog by enter your repository name on your browser after deploying.<br><img src="images/16135520183624.png" alt="-w915"></li>
+</ul>
+<h2 id="BackUp-Important"><a href="#BackUp-Important" class="headerlink" title="BackUp (Important !!!)"></a>BackUp (Important !!!)</h2><ul>
+<li>Use <a href="https://github.com/coneycode/hexo-git-backup">hexo-git-backup</a> to back up our <code>hexo</code> configuration.</li>
+<li><code>npm install hexo-git-backup --save</code> to install <code>hexo-backup</code> plug-in.</li>
+<li>Create an branch repository named <code>backup</code> on your Github.</li>
+<li>Edit <code>_config_yml</code>, add </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Backup</span><br><span class="line">backup:</span><br><span class="line">  type: git</span><br><span class="line">  theme: next, ***  # *** other themes you want to back up, separate by comma</span><br><span class="line">  repo:</span><br><span class="line">    github: ***,backup # replace *** to your backup branch SSH address</span><br></pre></td></tr></table></figure>
+<p><img src="images/16135569491549.png"></p>
+<ul>
+<li><p><code>hexo b</code> to back up your configurations on your <code>backup</code> branch.</p>
+<h2 id="Theme-and-configuration-Option"><a href="#Theme-and-configuration-Option" class="headerlink" title="Theme and configuration (Option)"></a>Theme and configuration (Option)</h2></li>
+<li><p>For me: I use <a href="https://github.com/theme-next/hexo-theme-next">NexT</a> theme.</p>
+</li>
+<li><p><code>git clone https://github.com/theme-next/hexo-theme-next themes/next</code> in your <code>blog</code> directory. It will save under <code>/blog/themes</code>.<br><img src="images/16135524473082.png"></p>
+</li>
+<li><p>Back to <code>blog</code> directory, edit <code>_config/yml</code>. and change <code>theme: landscape</code> to <code>theme: next</code>. Save and exit, then <code>hexo clean</code>(clean), <code>hexo g</code>(generate), <code>hexo s</code>(start). If everything is ok, <code>hexo d</code>(deploy) to deploy.<br><img src="images/16135526686387.png"></p>
+</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2021/02/17/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -587,5 +587,13 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Hamming code generation and correction</title>
+    <url>/2021/03/08/Hamming_code_generation_and_correction/</url>
+    <content><![CDATA[<p>This project id for:<br>1.Get hamming distance between two codewords<br>2.determine the correct codeword IFF there are any errors in received data<br>3.hamming code generation and correction</p>
+<p>For quick running example:<br>codeword = ‘101101’<br>check_num = 4<br>hamming_list = [None, None, ‘1’, None,’0’,’1’,’1’, None, ‘0’, ‘1’]<br>bin_list = [‘0001’, ‘0010’, ‘0011’, ‘0100’, ‘0101’, ‘0110’, ‘0111’, ‘1000’, ‘1001’, ‘1010’]<br>index_bit = 1,2,4,8<br>check_list = [1,2,4,8]</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def hamming_distance(codeword1, codeword2):</span><br><span class="line">    count &#x3D; 0</span><br><span class="line">    for i in range(len(codeword1)):</span><br><span class="line">        if(codeword1[i] !&#x3D; codeword2[i]):</span><br><span class="line">            count +&#x3D; 1</span><br><span class="line">    return count</span><br><span class="line"></span><br><span class="line">#determine the correct codeword IFF there are any errors in received data</span><br><span class="line">def checking_codewords(codewords, received_data):</span><br><span class="line">    words_dist &#x3D; float(&#39;inf&#39;)</span><br><span class="line">    dist &#x3D; float(&#39;inf&#39;)</span><br><span class="line">    correct_word&#x3D; &#39;&#39;</span><br><span class="line"></span><br><span class="line">    # Get the codewords hamming distance</span><br><span class="line">    i&#x3D; 0</span><br><span class="line">    if i &lt; len(codewords):</span><br><span class="line">        for j in range(i+1, len(codewords)):</span><br><span class="line">            count &#x3D; hamming_distance(codewords[i], codewords[j])</span><br><span class="line">            if words_dist &gt; count:</span><br><span class="line">                words_dist &#x3D; count</span><br><span class="line">        i +&#x3D; 1</span><br><span class="line"></span><br><span class="line">    for word in codewords:</span><br><span class="line">        count&#x3D;hamming_distance(word, received_data)</span><br><span class="line">        if dist &gt; count:</span><br><span class="line">            dist &#x3D; count</span><br><span class="line">            correct_word &#x3D; word</span><br><span class="line"></span><br><span class="line">    if words_dist &lt; dist * 2+1:</span><br><span class="line">        return &quot;error detected&quot;</span><br><span class="line">    return correct_word</span><br><span class="line"></span><br><span class="line">#words &#x3D;  [&#39;1010111101&#39;, &#39;0101110101&#39;, &#39;1110101110&#39;, &#39;0010110010&#39;, &#39;1111000110&#39;, &#39;1100101001&#39;]</span><br><span class="line">#data &#x3D;  &#39;1000011100&#39;</span><br><span class="line">#print(checking_codewords(words, data))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#hamming_list &#x3D; [None, None, &#39;1&#39;, None,&#39;0&#39;,&#39;1&#39;,&#39;1&#39;, None, &#39;0&#39;, &#39;1&#39;]</span><br><span class="line">#bin_list &#x3D; [&#39;0001&#39;, &#39;0010&#39;, &#39;0011&#39;, &#39;0100&#39;, &#39;0101&#39;, &#39;0110&#39;, &#39;0111&#39;, &#39;1000&#39;, &#39;1001&#39;, &#39;1010&#39;]</span><br><span class="line">#index_bit &#x3D; 1,2,4,8</span><br><span class="line">def parityBits_generator(hamming_list, bin_list,index_bit):</span><br><span class="line">    bin_index &#x3D; &#39;&#123;:08b&#125;&#39;.format(index_bit) #convert index_bit into binary and fix the length as 8</span><br><span class="line">    index_one &#x3D; bin_index.find(&#39;1&#39;) - 8 #got the &#39;1&#39; position in bianry of index_bit(-1 for 0001(1), -2 for 0010(4), -3 for 0100(4))</span><br><span class="line">    parity_bits&#x3D;[]</span><br><span class="line">    for i in range(len(bin_list)):</span><br><span class="line">        if(i+1 !&#x3D; index_bit) and bin_list[i][index_one] &#x3D;&#x3D; &#39;1&#39;: #skip the index_bit itself and find all parity bit</span><br><span class="line">            parity_bits.append(int(hamming_list[i])) #store all parity bits into bit_parity list</span><br><span class="line">    return parity_bits</span><br><span class="line"></span><br><span class="line">def bin_list_generator(length):</span><br><span class="line">    bin_list &#x3D; []</span><br><span class="line">    for i in range (length):</span><br><span class="line">        bin_list.append(&#39;&#123;:08b&#125;&#39;.format(i+1))</span><br><span class="line">    return bin_list</span><br><span class="line"></span><br><span class="line">#get Number of check_num</span><br><span class="line">def check_num_generator(codeword):</span><br><span class="line">    check_num &#x3D; 0</span><br><span class="line">    while (2**check_num &lt; len(codeword) + check_num + 1):</span><br><span class="line">        check_num +&#x3D; 1</span><br><span class="line">    return check_num</span><br><span class="line"></span><br><span class="line">#sotre each check_num</span><br><span class="line">def check_list_generator(check_num):</span><br><span class="line">    check_list &#x3D; []</span><br><span class="line">    for i in range(check_num):</span><br><span class="line">        check_list.append(2**i)</span><br><span class="line">    return check_list</span><br><span class="line"></span><br><span class="line">from functools import reduce</span><br><span class="line">def hamming_code_generator(codeword):</span><br><span class="line">    check_list&#x3D;[]</span><br><span class="line">    pointer &#x3D; 0</span><br><span class="line">    </span><br><span class="line">    check_num &#x3D; check_num_generator(codeword)</span><br><span class="line">    #length of hamming code</span><br><span class="line">    hamming_list &#x3D; [None] * (check_num + len(codeword))</span><br><span class="line">    bin_list&#x3D;bin_list_generator(len(hamming_list))</span><br><span class="line">    #put codeword into the hamming list with correction position</span><br><span class="line">    #create bin_list to restore binary of 1-length</span><br><span class="line">    for i in range(len(hamming_list)):</span><br><span class="line">        if (i &amp; i+1) !&#x3D; 0: #check whether the current position is the power of 2</span><br><span class="line">            hamming_list[i]&#x3D;codeword[pointer]</span><br><span class="line">            if(pointer &lt; len(codeword)-1):</span><br><span class="line">                pointer +&#x3D; 1</span><br><span class="line"></span><br><span class="line">    #get each check_bit and put them into hamming_list</span><br><span class="line">    for i in range(check_num):</span><br><span class="line">        parity_bits &#x3D; parityBits_generator(hamming_list, bin_list, 2**i)</span><br><span class="line">        parity &#x3D; reduce(lambda x,y:x^y, parity_bits) # Xor all parity bit</span><br><span class="line">        hamming_list[2**i - 1] &#x3D; str(parity)</span><br><span class="line">    #convert the hamming_list into int</span><br><span class="line">    hamming_code &#x3D; int(&#39;&#39;.join(hamming_list))</span><br><span class="line">    return hamming_code</span><br><span class="line"></span><br><span class="line">#For checking if there are any errors in the received_data</span><br><span class="line">#and find the position of the error</span><br><span class="line">def hamming_code_error_detection(received_data):</span><br><span class="line">    hamming_list &#x3D; list(received_data)</span><br><span class="line">    bin_list &#x3D; bin_list_generator(len(hamming_list))</span><br><span class="line">    check_num &#x3D; -1</span><br><span class="line">    error_list&#x3D;[]</span><br><span class="line">    #get the check numbers of received_data and store them into a list </span><br><span class="line">    while(2**check_num &lt; len(hamming_list)):</span><br><span class="line">        check_num +&#x3D; 1</span><br><span class="line">    check_list &#x3D; check_list_generator(check_num)</span><br><span class="line"></span><br><span class="line">    #Xor each parity_bits and store them into error_list</span><br><span class="line">    #reverse error_list and convert it into decimal(err_position)</span><br><span class="line">    #If erro_position is 0 means parity is even, which means no error found</span><br><span class="line">    #otherwise, return the position of error</span><br><span class="line">    for check in check_list:</span><br><span class="line">        parity_bits &#x3D; parityBits_generator(hamming_list, bin_list, check)</span><br><span class="line">        parity_bits.insert(0,int(hamming_list[check-1]))</span><br><span class="line">        parity &#x3D; reduce(lambda x,y:x^y, parity_bits)</span><br><span class="line">        error_list.append(str(parity))</span><br><span class="line">    </span><br><span class="line">    error_list.reverse()</span><br><span class="line">    err_position &#x3D; int(&#39;&#39;.join(error_list),2)</span><br><span class="line">    if(err_position &#x3D;&#x3D; 0):</span><br><span class="line">        return(&quot;No error found.&quot;)</span><br><span class="line">    return (&quot;Error position is at &quot; + str(err_position))</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
   </entry>
 </search>
